@@ -1,0 +1,14 @@
+# Compiled Executables
+*.exe
+*.out
+*.app
+
+# Intermediate Objects
+*.o
+*.obj
+
+# IDE Folders (Gaya ng VS Code o Dev-C++)
+.vscode/
+.idea/
+*.layout
+*.depend
