@@ -1,11 +1,4 @@
-#ifndef FLIGHT_H
-#define FLIGHT_H
-#include <string>
-
-class Flight {
-public:
-    std::string flightID;
-    std::string destination;
-    float price;
-};
-#endif
+// PURPOSE: Ito ang "Entity Class" (Ang Blueprint).
+// Dito nakalista ang lahat ng impormasyon na dapat mayroon ang ISANG flight.
+// Halimbawa: Flight ID, Destination, at Presyo.
+// Isipin mo ito na parang "Biodata" ng isang flight.
