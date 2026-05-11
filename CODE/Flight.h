@@ -21,5 +21,5 @@ struct Flight {
 
     bool seats[6];         
     bool isAvailable;      
-
+};
 #endif
