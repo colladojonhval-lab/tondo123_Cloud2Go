@@ -23,7 +23,7 @@ class AirlineBookingManager {
 private:
     vector<Flight> flights;
     vector<BookingRecord> history;
-    vector<Transaction> transactions; // Lalagyan ng resibo
+    vector<Transaction> transactions; 
     string dbFile = "database.txt";
 
     void loadData();
