@@ -55,6 +55,8 @@ void AirlineBookingManager::saveData() {
     file.close();
 }
 
+
+
 void AirlineBookingManager::viewHistory() {
     cout << "\n==========================================";
     cout << "\n       TRANSACTION HISTORY / RECEIPT      ";
@@ -158,18 +160,13 @@ void AirlineBookingManager::cancelBooking() {
     }
 }
 
-void AirlineBookingManager::updateFlightPrice() {
-    int fNum = getValidatedInt("Flight Number: ");
-    for (int i = 0; i < flights.size(); i++) {
-        if (flights[i].getFlightNumber() == fNum) {
-            double p = getValidatedDouble("New Price: ");
-            flights[i].setPrice(p);
-            saveData();
-            cout << "Updated!\n";
-            system("pause");
-            return;
-        }
-    }
+void AirlineBookingManager::updatePassengerSeat() {
+    cout << "\n--- UPDATE PASSENGER SEAT ---\n";
+    cout << "Step 1: Cancel your current booking first.\n";
+    cancelBooking(); 
+
+    cout << "\nStep 2: Go to 'Book Flight' to choose your new seat.\n";
+    system("pause");
 }
 
 void AirlineBookingManager::updatePassengerInfo() {
