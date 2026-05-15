@@ -1,57 +1,54 @@
-#include "Flight.h"
+#include "AirlineBookingManager.h"
 #include <iostream>
-#include <string>
-
-
-void displayHeader();
-void displayMenu();
-void showFlightsTable(const Flight flights[], int size);
-void searchByBudget(const Flight flights[], int size);
-void processBooking(Flight flights[], int size);
-void showBookingHistory();
 
 using namespace std;
 
 int main() {
-  
-    const int SIZE = 5;
-    Flight flights[SIZE] = {
-        {101, "Cloud2Go", "Manila", "Singapore", "SG", "May 15", "08:00", "11:00", 5000.0, 5, 0, {false}, true},
-        {102, "Cloud2Go", "Manila", "Tokyo", "JP", "May 16", "10:00", "14:00", 12000.0, 5, 0, {false}, true},
-        {103, "Cloud2Go", "Manila", "Seoul", "KR", "May 17", "13:00", "17:00", 8500.0, 5, 0, {false}, true},
-        {104, "Cloud2Go", "Manila", "Bangkok", "TH", "May 18", "09:00", "12:00", 4500.0, 5, 0, {false}, true},
-        {105, "Cloud2Go", "Manila", "Sydney", "AU", "May 19", "21:00", "07:00", 25000.0, 5, 0, {false}, true}
-    };
-
+    AirlineBookingManager manager;
     int choice;
 
-    
     while (true) {
         system("cls");
-        displayHeader();
-        displayMenu();
 
-        cout << "Enter Choice: ";
-        cin >> choice;
+        cout << "===================================" << endl;
+        cout << "||     CLOUD2GO AIRLINE SYSTEM   ||" << endl;
+        cout << "===================================" << endl;
+        cout << "[1] Search & Book Flight         ||" << endl;
+        cout << "[2] View All Flights             ||" << endl;
+        cout << "[3] Update Passenger/Price       ||" << endl;
+        cout << "[4] Cancel Booking (Delete)      ||" << endl;
+        cout << "[5] Exit                         ||" << endl;
+        cout << "===================================" << endl;
+
+        choice = manager.getValidatedInt("Choice: ");
 
         if (choice == 1) {
-            searchByBudget(flights, SIZE);
-            processBooking(flights, SIZE);
+            
+            if (manager.searchByBudget() == true) {
+                char ok;
+                cout << "Book now? (Y/N): ";
+                cin >> ok;
+
+                if (toupper(ok) == 'Y') {
+                    manager.processBooking();
+                }
+            }
+          
         }
-        else if (choice == 2) { 
-            system("cls");
-            showFlightsTable(flights, SIZE);
-            showBookingHistory();
-        }
-        else if (choice == 3) { 
-            cout << "\nThank you for using Cloud2Go! Fly safe.\n";
-            break;
-        }
-        else {
-            cout << "Invalid choice. Please try again.\n";
+        else if (choice == 2) {
+            manager.showFlights();
             system("pause");
         }
+        else if (choice == 3) {
+            cout << "[1] Update Price [2] Update Name: ";
+            int sub = manager.getValidatedInt("");
+            if (sub == 1) manager.updateFlightPrice();
+            else manager.updatePassengerInfo();
+        }
+        else if (choice == 4) {
+            manager.cancelBooking();
+        }
+        else if (choice == 5) break;
     }
-
     return 0;
 }
