@@ -15,7 +15,7 @@ int main() {
         cout << "===================================" << endl;
         cout << "[1] Book Flight (Search)         ||" << endl;
         cout << "[2] View Transaction History     ||" << endl;
-        cout << "[3] Update Passenger/Price       ||" << endl;
+        cout << "[3] Update Passenger/Seat        ||" << endl;
         cout << "[4] Cancel Booking (Delete)      ||" << endl;
         cout << "[5] Exit                         ||" << endl;
         cout << "===================================" << endl;
@@ -39,10 +39,15 @@ int main() {
             system("pause");
         }
         else if (choice == 3) {
-            cout << "[1] Update Price [2] Update Name: ";
+            system("cls");
+            cout << " [1] Update Name\n [2] Update Seat\n Choice: ";
             int sub = manager.getValidatedInt("");
-            if (sub == 1) manager.updateFlightPrice();
-            else manager.updatePassengerInfo();
+            if (sub == 1) {
+                manager.updatePassengerInfo(); 
+            }
+            else {
+                manager.updatePassengerSeat(); 
+            }
         }
         else if (choice == 4) {
             manager.cancelBooking();
