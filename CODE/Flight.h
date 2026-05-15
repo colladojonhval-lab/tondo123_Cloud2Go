@@ -1,6 +1,5 @@
 #ifndef FLIGHT_H
 #define FLIGHT_H
-
 #include <string>
 
 class Flight {
@@ -8,7 +7,7 @@ private:
     int flightNumber;
     std::string destination;
     double price;
-    bool seats[6]; 
+    bool seats[6];
 
 public:
     Flight() {
@@ -43,5 +42,4 @@ public:
         for (int i = 0; i < 5; i++) seats[i + 1] = (data[i] == '1');
     }
 };
-
 #endif
