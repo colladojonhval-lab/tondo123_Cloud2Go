@@ -1,32 +1,46 @@
-#ifndef AIRLINE_BOOKING_MANAGER_H
-#define AIRLINE_BOOKING_MANAGER_H
-
+#ifndef AIRLINEBOOKINGMANAGER_H
+#define AIRLINEBOOKINGMANAGER_H
+#include <vector>
 #include <string>
+#include "Flight.h"
+
 using namespace std;
 
-struct Flight {
-    int flightNumber;
-    string origin;
-    string destination;
-    string country;
-    double price;
-    int totalSeats;
-    int reservedSeats;
-    bool seats[6];
+struct BookingRecord {
+    string pName;
+    int fID;
+    int sNum;
 };
 
-class Airline_BookingManager {
+struct Transaction {
+    string passengerName;
+    string flightDetails;
+    double price;
+    int seatNumber;
+};
+
+class AirlineBookingManager {
 private:
-    Flight flights[5];
-    int flightCount;
+    vector<Flight> flights;
+    vector<BookingRecord> history;
+    vector<Transaction> transactions; // Lalagyan ng resibo
+    string dbFile = "database.txt";
+
+    void loadData();
+    void saveData();
 
 public:
-    Airline_BookingManager();
+    AirlineBookingManager();
 
-    void addFlight(Flight f);
     void showFlights();
-    void searchByBudget(double budget);
     void processBooking();
-};
+    bool searchByBudget();
+    void updateFlightPrice();
+    void updatePassengerInfo();
+    void cancelBooking();
+    void viewHistory(); 
 
+    int getValidatedInt(string prompt);
+    double getValidatedDouble(string prompt);
+};
 #endif
