@@ -23,7 +23,8 @@ int main() {
         choice = manager.getValidatedInt("Choice: ");
 
         if (choice == 1) {
-            
+            System("cls");
+
             if (manager.searchByBudget() == true) {
                 char ok;
                 cout << "Book now? (Y/N): ";
