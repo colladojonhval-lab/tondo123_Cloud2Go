@@ -15,7 +15,7 @@ int main() {
         cout << "===================================" << endl;
         cout << "[1] Book Flight                  ||" << endl;
         cout << "[2] View Transaction History     ||" << endl;
-        cout << "[3] Update Passenger/Seat        ||" << endl;
+        cout << "[3] Update Passenger Name/Seat   ||" << endl;
         cout << "[4] Cancel Booking (Delete)      ||" << endl;
         cout << "[5] Exit                         ||" << endl;
         cout << "===================================" << endl;
