@@ -1,0 +1,10 @@
+Section 1: Introduction
+1.1 Project Overview & Target SDG
+CLOUD2GO Airline Booking System is a console application for managing airline reservations created using C++ programming language. It offers several functions to help users book flights and monitor their booking process by such functions as view flights, reserve seats, manage passenger data, cancel booking, record transactions, and monitor booking history. Concepts used in this program include functions, classes, vectors, files, and data validation that help organize a user-friendly reservation system.
+The purpose of creating this application is offering an opportunity to manage airline reservations more effectively and accurately compared to manual booking transactions by improving the efficiency of managing airline records using computer programming concepts.
+The project relates to Sustainable Development Goal (SDG) 9 – industry, innovation, and infrastructure since it contributes to innovation in the field of transport services through the use of technology and software.
+
+1.2 Problem Statement 
+Booking flights manually is an often tedious, unorganized task that may lead to human mistakes, such as wrongly entering passenger details, double-booking seats, and misplacing records for passengers. Organizing the transactions of passengers manually would make it difficult to manage booking history and updating information about passengers effectively.
+
+Therefore, to solve these issues, the CLOUD2GO Airline Booking System was designed in order to automate the entire task of booking. This application allows one to organize their flight bookings, passenger details, transaction records, and booking history in an efficient and effective manner.
