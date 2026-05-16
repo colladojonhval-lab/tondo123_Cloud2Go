@@ -195,7 +195,7 @@ void AirlineBookingManager::updatePassengerInfo() {
     bool found = false;
     string newName = "";
 
-    // Ina-update ang name nang diretso sa working transactions vector kung saan nakasalalay ang View History 
+    
     for (int i = 0; i < transactions.size(); i++) {
         if (transactions[i].passengerName == target) {
             if (!found) {
