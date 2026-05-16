@@ -1,2 +1,23 @@
-//Initial data with at least 15 records
-//Mga names na gagamitin natin
+101 Kyoto-Japan 5000 10000
+102 Akihabara-Japan 5000 00000
+103 Singapore 2000 00000
+106 Paris-France 45000 00000
+107 London-UK 48000 00000
+108 Rome-Italy 42000 00000
+109 Madrid-Spain 39000 00000
+110 Berlin-Germany 41000 00000
+111 Bangkok-Thailand 5000 00000
+112 Hanoi-Vietnam 4500 00000
+113 Jakarta-Indonesia 4000 00000
+114 Taipei-Taiwan 9000 00000
+115 Beijing-China 15000 00000
+116 Washington-USA 75000 00000
+117 Ottawa-Canada 72000 00000
+118 Canberra-Australia 55000 00000
+119 Wellington-NZ 58000 00000
+120 Moscow-Russia 35000 00000
+121 Brasilia-Brazil 65000 00000
+122 Cairo-Egypt 30000 00000
+123 New_Delhi-India 12000 00000
+124 Athens-Greece 38000 00000
+125 Bern-Switzerland 85000 00000
