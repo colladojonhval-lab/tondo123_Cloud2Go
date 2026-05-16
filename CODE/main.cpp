@@ -13,7 +13,7 @@ int main() {
         cout << "===================================" << endl;
         cout << "||     CLOUD2GO AIRLINE SYSTEM   ||" << endl;
         cout << "===================================" << endl;
-        cout << "[1] Book Flight (Search)         ||" << endl;
+        cout << "[1] Book Flight         ||" << endl;
         cout << "[2] View Transaction History     ||" << endl;
         cout << "[3] Update Passenger/Seat        ||" << endl;
         cout << "[4] Cancel Booking (Delete)      ||" << endl;
