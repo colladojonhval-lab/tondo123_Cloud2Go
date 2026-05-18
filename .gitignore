@@ -7,7 +7,7 @@
 *.o
 *.obj
 
-# IDE Folders (Gaya ng VS Code o Dev-C++)
+# IDE Folders
 .vscode/
 .idea/
 *.layout
